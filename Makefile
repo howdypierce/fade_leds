@@ -5,7 +5,7 @@ RPI_LIB = ../rpi_ws281x
 default: $(TARGET)
 
 $(TARGET): $(TARGET).c
-	gcc $< -o $(TARGET) -I $(RPI_LIB) $(RPI_LIB)/libws2811.a
+	gcc $< -o $(TARGET) -I $(RPI_LIB) $(RPI_LIB)/libws2811.a -lm
 
 clean:
 	rm -f $(TARGET)
